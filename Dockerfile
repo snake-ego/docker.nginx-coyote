@@ -24,7 +24,9 @@ RUN set -x \
     && chown nginx:nginx /var/cache/coyote/ \
     && chmod 770 /var/cache/coyote/
 
+COPY ./files/nginx.log.conf /etc/nginx/partial.d/log.conf
 COPY ./files/nginx.challenges.conf /etc/nginx/partial.d/challenges.conf
 COPY ./files/nginx.default.conf /etc/nginx/conf.d/default.conf
+COPY ./files/nginx.conf /etc/nginx/nginx.conf
 
 VOLUME /cert
