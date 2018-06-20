@@ -30,3 +30,4 @@ COPY ./files/nginx.default.conf /etc/nginx/conf.d/default.conf
 COPY ./files/nginx.conf /etc/nginx/nginx.conf
 
 VOLUME /cert
+EXPOSE 80 443
